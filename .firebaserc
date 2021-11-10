@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ionic-test-61132"
+  },
+  "targets": {
+    "ionic-test-61132": {
+      "hosting": {
+        "app": [
+          "eweather"
+        ]
+      }
+    }
+  }
+}

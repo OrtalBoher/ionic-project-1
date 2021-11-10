@@ -1,17 +1,45 @@
-<ion-header [translucent]="true">
+  <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content  class="ion-padding">
+
+  <ion-grid>
+      <!--City-->
+      <ion-row class="ion-text-center">
+          <ion-col class="ion-text-center">
+              <h1>{{root.name}}</h1>
+          </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+          <ion-col>
+              <p>{{weatherDesc.description | titlecase}}</p>
+          </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center">
+          <ion-col>
+              <!-- <img [src]="weatherDesc.icon | weatherIcons"> -->
+          </ion-col>
+          <ion-col>
+              <h2 class="temperature">{{temp.temp | number: '1.0-0'}}º</h2>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <h3 class="viento">💨 {{wind.speed}} km/h</h3>
+          </ion-col>
+      </ion-row>
+
+    <div class="ion-text-center">
+      <ion-button  shape="round" color="primary" (click)="printLocationWeatherReport()" >Get Weather report</ion-button>
+
+    </div>
+
+
+  </ion-grid>
 </ion-content>
